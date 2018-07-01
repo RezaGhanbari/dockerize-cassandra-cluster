@@ -37,9 +37,9 @@ services:
       - 9160
     # Cassandra ulimit recommended settings
     ulimits:
-      - memlock: -1
-      - nproc: 32768
-      - nofile: 100000
+      memlock: -1
+      nproc: 32768
+      nofile: 100000
   
   # This is configuration for our non seed cassandra node.
   # The node is called DC1N2 .i.e Node 2 in data centre 1.
@@ -129,7 +129,7 @@ services:
       - "10001:9000"
       
 networks:
-  dc1ring
+  dc1ring:
  
     
   
